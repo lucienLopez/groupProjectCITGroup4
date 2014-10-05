@@ -15,6 +15,7 @@ if ($rows!=0)
   while ($row = mysql_fetch_assoc($query))
   {
     $_SESSION['id_user'] = $row['iduser'];
+    $_SESSION['userName'] = $row['userName'];
     //TODO : check if is admin, redirect...
     echo("id_user : ".$_SESSION['id_user']);
     exit();

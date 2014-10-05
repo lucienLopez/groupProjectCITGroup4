@@ -8,6 +8,8 @@ session_start();
 if(isset($_SESSION['id_user'])){
 	$connected = true;
 	echo("connected");		//TODO : Add custom stuff for connected ones
+}else{
+	include("notConnectedHeader.php");
 }
 
 //handles database connection

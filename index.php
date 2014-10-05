@@ -1,3 +1,8 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/global.css">
+</head>
+<body>
+
 <?php
 
 // handles database connection and checks if the user is connected
@@ -11,3 +16,4 @@ if(isset($_GET["page"])&& file_exists($_GET["page"].".php")){
 include($page.".php");
 
 ?>
+</body>
