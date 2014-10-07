@@ -16,12 +16,14 @@ if ($rows!=0)
   {
     $_SESSION['id_user'] = $row['iduser'];
     $_SESSION['userName'] = $row['userName'];
-    //TODO : check if is admin, redirect...
-    echo("id_user : ".$_SESSION['id_user']);
+    $_SESSION['userIsAdmin'] = $row['userIsAdmin'];
+
+    header('Location: ../index.php?');
+    
     exit();
   }
 }else{
-	header('Location: ../index.php?page=login&failedlogin=true');
+	header('Location: ../index.php?failedlogin=true');
 	die();
 }
 ?>

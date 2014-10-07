@@ -7,6 +7,7 @@
 
 // handles database connection and checks if the user is connected
 include("tools/init.php");
+include("header.php");
 
 if(isset($_GET["page"])&& file_exists($_GET["page"].".php")){
 	$page=$_GET["page"];

@@ -4,13 +4,15 @@
 
 //checks if the user is alredy connected, we'll have to load different stuff if he is
 $connected=false;
+$isAdmin = false;
 session_start();
 if(isset($_SESSION['id_user'])){
 	$connected = true;
-	echo("connected");		//TODO : Add custom stuff for connected ones
-}else{
-	include("notConnectedHeader.php");
+	if($_SESSION['userIsAdmin']==1){
+		$isAdmin = true;
+	}
 }
+
 
 //handles database connection
 //TODO : better exceptions

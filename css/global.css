@@ -1,13 +1,24 @@
 .topBar{
 	background-color : rgb(155, 20, 20);
 	width : 100%;
-	padding : 12px;
 	position : absolute;
 }
 .loginForm{
 	margin: 0;
 }
+.loginSubmitButton{
+	border: 1px solid #c3c5c8;
+	border-radius: 2px;
+	height: 30px;
+	padding: 7px 4px 6px 9px;
+}
+.loginFormFields{
+	padding: 7px 4px 6px 9px;
+	border: 1px solid #c3c5c8;
+	border-radius: 2px;
+}
 .rightHalf{
+	padding : 12px;
 	margin: 0;
 	float: right;
 	padding-right: 17px;
