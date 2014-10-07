@@ -2,7 +2,7 @@
 //Tool that handles database connection, and that checks if the user is already connected
 
 
-//checks if the user is alredy connected, we'll have to load different stuff if he is
+//checks if the user is alredy connected, and if he is an admin
 $connected=false;
 $isAdmin = false;
 session_start();

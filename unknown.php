@@ -1,4 +1,7 @@
 <?php
+// Should probably be renamed "home.php"
+
+// Retrieve all restaurants in the database
 $query = mysql_query("SELECT * FROM RESTAURANTS ");
 $rows = mysql_num_rows($query);
 if ($rows!=0)

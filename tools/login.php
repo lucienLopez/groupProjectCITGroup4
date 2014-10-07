@@ -8,6 +8,7 @@ if(!(isset($_POST["userName"]) && isset($_POST["password"]))){
 }
 
 // mysql request
+// TODO preven SQL injections
 $query = mysql_query("SELECT * FROM USER WHERE userName='".$_POST["userName"]."' AND userPassword ='".$_POST["password"]."'");
 $rows = mysql_num_rows($query);
 if ($rows!=0)
