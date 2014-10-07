@@ -9,7 +9,7 @@
 		<?php }
 		else{
 			if($isAdmin){?>
-				<a href="backofficeHomepage.php"><button class="loginSubmitButton">backoffice</button></a>
+				<a href="index.php?page=backofficeHomepage"><button class="loginSubmitButton">backoffice</button></a>
 			<?php } ?>
 			<a href="tools/logout.php"><button class="loginSubmitButton">logout</button></a>
 		<?php }?>
