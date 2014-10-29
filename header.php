@@ -6,6 +6,7 @@
 				<input type="password" name="password" id="password" placeholder="Password" class="loginFormFields">
 				<input type="submit" value="Login" class="loginSubmitButton">
 			</form>
+            <button onclick="showRegisterPopup()" class="registerButton">Register</button>
 		<?php }
 		else{
 			if($isAdmin){?>

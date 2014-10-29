@@ -5,15 +5,22 @@
 }
 .loginForm{
 	margin: 0;
+    display: inline;
 }
-.loginSubmitButton{
+.loginSubmitButton, .registerButton, .registerFormSubmitButton{
 	border: 1px solid #c3c5c8;
 	border-radius: 2px;
-	height: 30px;
-	padding: 7px 4px 6px 9px;
+	padding: 6px;
+    background-color: #ECECEC;
+    font-weight: bold;
+    text-shadow: 0px 1px 0px #fff;
+}
+.loginSubmitButton:hover, .registerButton:hover, .registerFormSubmitButton:hover{
+    background-color: #f9f9f9;
+    color: #797979;
 }
 .loginFormFields{
-	padding: 7px 4px 6px 9px;
+	padding: 6px;
 	border: 1px solid #c3c5c8;
 	border-radius: 2px;
 }
@@ -25,4 +32,39 @@
 }
 body{
 	margin: 0;
+}
+#registerPopup{
+    visibility:hidden;
+    text-align:center;
+    position:fixed;
+    top:18%;
+    background-color:#ffffff;
+    border-style:solid;
+    border-color:#697574;
+    border-width:1px;
+    border-radius: 3px;
+    left: 50%;
+    margin-left: -100px;
+    width: 300px;
+}
+.registerFormLine{
+    text-align: left;
+    margin: 8px 4px 8px 4px;
+}
+.registerForm{
+    margin:2px
+}
+.registerFormSubmitButton{
+    width:100%;
+}
+.registerFormSubmitButtonDiv{
+    width:50%;
+    display:inline-block;
+}
+.registerFormField{
+    right: 6px;
+    position: absolute;
+    border: 1px solid #c3c5c8;
+    border-radius: 2px;
+    padding:2px;
 }
