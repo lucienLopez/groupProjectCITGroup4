@@ -27,5 +27,7 @@ if(!$inserts)
     $message .= 'Whole query ' .$query;
     die($message);
     //header('Location: ../index.php?failedRegister=true');
+}else{
+    header('Location: ../index.php');
 }
 ?>

@@ -45,7 +45,7 @@ body{
     border-radius: 3px;
     left: 50%;
     margin-left: -100px;
-    width: 300px;
+    width: 330px;
 }
 .registerFormLine{
     text-align: left;
@@ -66,5 +66,18 @@ body{
     position: absolute;
     border: 1px solid #c3c5c8;
     border-radius: 2px;
-    padding:2px;
+    padding:2px 21px 2px 2px;
+    width:180px;
+}
+.registerFormField:disabled{
+    opacity: 0.3;
+}
+.registerFormFieldLoading{
+    background: url(../images/load.gif) no-repeat scroll 160px 3px/15px;
+}
+.registerFormFieldOk{
+    background: url(../images/ok.png) no-repeat scroll 160px 3px/15px;
+}
+.registerFormFieldKo{
+    background: url(../images/ko.png) no-repeat scroll 160px 3px/15px;
 }
