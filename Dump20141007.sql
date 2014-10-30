@@ -18,6 +18,32 @@ USE `groupproject`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `individualratings`
+--
+
+DROP TABLE IF EXISTS `individualratings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `individualratings` (
+  `idindividualRatings` int(11) NOT NULL AUTO_INCREMENT,
+  `ratingIdUser` int(11) DEFAULT NULL,
+  `ratingIdRestaurant` int(11) DEFAULT NULL,
+  `rating` tinyint(10) DEFAULT NULL,
+  PRIMARY KEY (`idindividualRatings`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `individualratings`
+--
+
+LOCK TABLES `individualratings` WRITE;
+/*!40000 ALTER TABLE `individualratings` DISABLE KEYS */;
+INSERT INTO `individualratings` VALUES (1,1,1,2),(2,1,1,2),(3,1,1,2),(4,1,1,2);
+/*!40000 ALTER TABLE `individualratings` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `restaurants`
 --
 
@@ -34,7 +60,7 @@ CREATE TABLE `restaurants` (
   `restaurantRating` int(11) DEFAULT '0',
   PRIMARY KEY (`idrestaurants`),
   UNIQUE KEY `idrestaurants_UNIQUE` (`idrestaurants`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +69,7 @@ CREATE TABLE `restaurants` (
 
 LOCK TABLES `restaurants` WRITE;
 /*!40000 ALTER TABLE `restaurants` DISABLE KEYS */;
-INSERT INTO `restaurants` VALUES (1,'Test',51.8996,-8.46584,0,0,0);
+INSERT INTO `restaurants` VALUES (1,'Test',51.8996,-8.46584,2,1,2),(2,'Test 2',-583,523.527,0,0,0),(3,'dfgdfgfd',45454,545455000,0,0,0);
 /*!40000 ALTER TABLE `restaurants` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -62,7 +88,7 @@ CREATE TABLE `user` (
   `userIsAdmin` bit(1) DEFAULT b'0',
   PRIMARY KEY (`iduser`),
   UNIQUE KEY `iduser_UNIQUE` (`iduser`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -71,7 +97,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'admin','admin','admin','');
+INSERT INTO `user` VALUES (1,'admin','admin','admin@admin.com',''),(2,'Bob','Bob','Bob','\0'),(3,'Bob','Bob','bob@bob.com','\0'),(4,'Bobby','Bobby','bob@bob.com','\0'),(5,'','','','\0'),(6,'Lel','Lel','nanana@gmail.com','\0'),(7,'Abb','Abb','nanana@gmail.com','\0'),(8,'nan','nan','lol@lol.com','\0'),(9,'nan','nan','nanana@gmail.com','\0');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -84,4 +110,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-10-07 17:36:14
+-- Dump completed on 2014-10-30 12:57:52
