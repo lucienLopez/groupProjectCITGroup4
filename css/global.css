@@ -81,3 +81,8 @@ body{
 .registerFormFieldKo{
     background: url(../images/ko.png) no-repeat scroll 160px 3px/15px;
 }
+
+.map_canvas {
+    width: 50%;
+    height: 200px;
+}

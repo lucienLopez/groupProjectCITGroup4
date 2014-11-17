@@ -30,7 +30,7 @@ CREATE TABLE `individualratings` (
   `ratingIdRestaurant` int(11) DEFAULT NULL,
   `rating` tinyint(10) DEFAULT NULL,
   PRIMARY KEY (`idindividualRatings`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `individualratings` (
 
 LOCK TABLES `individualratings` WRITE;
 /*!40000 ALTER TABLE `individualratings` DISABLE KEYS */;
-INSERT INTO `individualratings` VALUES (1,1,1,2),(2,1,1,2),(3,1,1,2),(4,1,1,2);
+INSERT INTO `individualratings` VALUES (1,1,1,2),(2,1,1,2),(3,1,1,2),(4,1,1,2),(5,1,1,4),(6,1,1,5),(7,1,1,2),(8,1,1,4),(9,1,1,4),(10,1,1,5),(11,1,2,5);
 /*!40000 ALTER TABLE `individualratings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -60,7 +60,7 @@ CREATE TABLE `restaurants` (
   `restaurantRating` int(11) DEFAULT '0',
   PRIMARY KEY (`idrestaurants`),
   UNIQUE KEY `idrestaurants_UNIQUE` (`idrestaurants`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,7 +69,7 @@ CREATE TABLE `restaurants` (
 
 LOCK TABLES `restaurants` WRITE;
 /*!40000 ALTER TABLE `restaurants` DISABLE KEYS */;
-INSERT INTO `restaurants` VALUES (1,'Test',51.8996,-8.46584,2,1,2),(2,'Test 2',-583,523.527,0,0,0),(3,'dfgdfgfd',45454,545455000,0,0,0);
+INSERT INTO `restaurants` VALUES (1,'Test',51.8996,-8.46584,26,7,4),(2,'Test 2',-583,523.527,5,1,5),(3,'dfgdfgfd',45454,545455000,0,0,0),(4,'Test2',25,253,0,0,0),(5,'Liberty grill',51.8977,-8.4781,0,0,0);
 /*!40000 ALTER TABLE `restaurants` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -110,4 +110,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-10-30 12:57:52
+-- Dump completed on 2014-11-14 10:15:32

@@ -40,17 +40,38 @@ function showRating($idRestaurant){
 }
 
 // Retrieve all restaurants in the database
+$i=-1;
 $query = mysql_query("SELECT * FROM RESTAURANTS ");
 $rows = mysql_num_rows($query);
 if ($rows!=0)
 {
   while ($row = mysql_fetch_assoc($query))
   {
+    $i++;
     echo("ID : ".$row['idrestaurants']."</br>");
     echo("Name : ".$row['restaurantName']."</br>");
     echo("GPSX : ".$row['restaurantGPSX']."</br>");
     echo("GPSY : ".$row['restaurantGPSY']."</br>");
-    yourRating($row['idrestaurants']);
-  }
+    yourRating($row['idrestaurants']);?>
+      <script>
+      function initialize<?php echo($i); ?>() {
+          var myLatlng = new google.maps.LatLng(<?php echo($row['restaurantGPSX']);?>, <?php echo($row['restaurantGPSY']);?>);
+          var mapCanvas = document.getElementById('map_canvas<?php echo($i); ?>');
+          var mapOptions = {
+              center: myLatlng,
+              zoom: 15,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+          var map = new google.maps.Map(mapCanvas, mapOptions)
+          var marker = new google.maps.Marker({
+              position: myLatlng,
+              map: map,
+              title: "<?php echo($row['restaurantName']); ?>"
+          });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize<?php echo($i); ?>);
+    </script>
+    <div id="map_canvas<?php echo($i); ?>" class="map_canvas"></div>
+  <?php }
 }
 ?>

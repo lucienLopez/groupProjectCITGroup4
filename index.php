@@ -1,6 +1,7 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="css/global.css">
     <script language="javascript" type="text/javascript" src="js/global.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
 	<title>Eat in Cork</title>
 </head>
 <body>
